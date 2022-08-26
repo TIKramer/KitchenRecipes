@@ -4,6 +4,12 @@
  export const ENDPOINTS = {
      recipes:
      {
-        findByIngredients : '/recipes/findByIngredients'
+        findByIngredients : '/recipes/findByIngredients',
+        ingredientsById: '/ingredientWidget.json',
+        simularRecipes: '/similar',
+        getInstructions: '/analyzedInstructions',
+        getNutrition: '/nutritionWidget.json',
+        getRecipeInformation: 'information'
+
      }
  }
