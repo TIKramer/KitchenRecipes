@@ -38,12 +38,12 @@ type measurment = {
 }
 type instructions = {
     number: number,
-    steps: steps[],
+    steps: step[],
 
 }
 
 
-type steps = {
+type step = {
     number: number,
     step: string,
     ingredients: ingredient[],
