@@ -1,17 +1,20 @@
 import * as axiosLib from 'axios';
+import { API_BASE_URL, API_KEY } from '../utils/config';
 
 
 
-let API_BASE_URL =  'https://api.spoonacular.com/'
 /**
  * Instantiate Axios instance
  */
- const token = 'b001fff46a8e4dafadc90afde144c8c4'
 
  
 const axios = axiosLib.default.create({
   baseURL: API_BASE_URL,
   timeout: 30000,
+  params:{
+  
+    "apiKey": API_KEY,
+},
 
 });
 
