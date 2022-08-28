@@ -1,19 +1,21 @@
 import { View, StyleSheet, TextInput } from "react-native";
 import { Feather } from "@expo/vector-icons";
-import {
-  IconButton,
-  useTheme,
-} from "react-native-paper";
+import
+  {
+    IconButton,
+    useTheme,
+  } from "react-native-paper";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import React from "react";
 
-const SearchBar = ({ term, onTermChange, onTermSubmit, searchBarRef, placeholder} : {
+const SearchBar = ({ term, onTermChange, onTermSubmit, searchBarRef, placeholder }: {
   term: string,
   onTermChange(value: string): void,
   onTermSubmit(): void,
   searchBarRef: React.RefObject<TextInput>,
   placeholder: string
-}) => {
+}) =>
+{
   const theme = useTheme();
 
   return (

@@ -1,7 +1,7 @@
-import { Button, FlatList, KeyboardAvoidingView, StyleSheet, View } from 'react-native';
+import {  FlatList, KeyboardAvoidingView, StyleSheet, View } from 'react-native';
 
 import { RootTabScreenProps } from '../../types';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import SearchBar from '../components/SearchBar';
 import { recipeAPI } from '../api';
 import { ActivityIndicator } from 'react-native-paper';
