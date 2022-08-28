@@ -7,11 +7,12 @@ import {
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import React from "react";
 
-const SearchBar = ({ term, onTermChange, onTermSubmit, searchBarRef} : {
+const SearchBar = ({ term, onTermChange, onTermSubmit, searchBarRef, placeholder} : {
   term: string,
   onTermChange(value: string): void,
   onTermSubmit(): void,
-  searchBarRef: React.RefObject<TextInput>
+  searchBarRef: React.RefObject<TextInput>,
+  placeholder: string
 }) => {
   const theme = useTheme();
 
@@ -24,7 +25,7 @@ const SearchBar = ({ term, onTermChange, onTermSubmit, searchBarRef} : {
           autoCapitalize="none"
           autoCorrect={false}
           style={styles.inputStyle}
-          placeholder="Search"
+          placeholder={placeholder}
           value={term}
           onChangeText={onTermChange}
           onEndEditing={onTermSubmit}
