@@ -1,7 +1,7 @@
 interface RecipeState {
     readonly id: number;
     readonly title: string;
-    readonly missedIngredientCount:number;
+    readonly missedIngredientCount:number | undefined;
     readonly image: string;
     readonly imageType: string;
     readonly serving?: number;

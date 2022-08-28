@@ -4,10 +4,10 @@ import { FlatList, View } from 'react-native';
 import { Text } from 'react-native-paper';
 import { getSimularRecipes } from '../api/recipe.api';
 import { useSelector } from "react-redux";
-import SimularRecipeCard from './SimularRecipeCard';
+import SimularRecipeCard from './SimilarRecipeCard';
 
 
-const SimularRecipes = () =>
+const SimilarRecipes = () =>
 {
     const { id } = useSelector((state: State) => state.recipe);
     const [simular, setSimular] = React.useState<Simular[]>([]);
@@ -47,4 +47,4 @@ const SimularRecipes = () =>
     )
 };
 
-export default SimularRecipes;
+export default SimilarRecipes;

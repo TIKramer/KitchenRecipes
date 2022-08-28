@@ -38,11 +38,12 @@ const RecipeHeader = () =>
               {sourceName}
             </Subheading>
           </View>
-          {missedIngredientCount > 0 ?
-            <Text>You are missing {missedIngredientCount} ingredients</Text>
-            :
-            <Text>You have all the ingredients</Text>
-          }
+          {missedIngredientCount ?
+            missedIngredientCount > 0 ?
+              <Text>You are missing {missedIngredientCount} ingredients</Text>
+              :
+              <Text>You have all the ingredients</Text>
+            : null}
           <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
               {aggregateLikes > 0 ?

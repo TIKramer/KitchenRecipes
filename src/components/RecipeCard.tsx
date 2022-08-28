@@ -16,7 +16,7 @@ const RecipeCard = ({ id, title, image, missingCount }: { id: number, title: str
 
     const loadRecipe = () =>
     {
-        setRecipeID(id)
+        setRecipeID(id, missingCount)
         navigation.navigate('RecipeNav')
 
     }

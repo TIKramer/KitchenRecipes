@@ -10,7 +10,7 @@ export enum ActionTypes
 
 const INITIAL_STATE: RecipeState = {
   id: 0,
-  missedIngredientCount: 0,
+  missedIngredientCount: undefined,
   title: "",
   image: "unknown.png",
   imageType: ".png",
@@ -35,7 +35,9 @@ const reducer = (state = INITIAL_STATE, action: { type: any; payload: any; }) =>
     case ActionTypes.SET_RECIPE_ID:
       return {
         ...INITIAL_STATE,
-        id: action.payload,
+        id: action.payload.id,
+        missedIngredientCount: action.payload.missingCount,
+
       };
 
     case ActionTypes.SET_RECIPE_INFORMATION: {

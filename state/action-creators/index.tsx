@@ -10,11 +10,11 @@ export const setRecipe_Information = (recipeInformation: Recipe_Information) => 
   };
 };
 
-export const setRecipeID = (id: number) => {
+export const setRecipeID = (id: number, missingCount: number | undefined) => {
   return (dispatch: ThunkDispatch<{}, {}, AnyAction>) => {
     dispatch({
       type: ActionTypes.SET_RECIPE_ID,
-      payload: id 
+      payload: {id, missingCount}
     });
   };
 };

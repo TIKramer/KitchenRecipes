@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, ScrollView, StyleSheet } from 'react-native';
 import { ActivityIndicator, List } from 'react-native-paper';
-import SimularRecipes from '../components/SimularRecipes';
+import SimilarRecipes from '../components/SimilarRecipes';
 import Step from '../components/Step';
 import RecipeHeader from '../components/RecipeHeader';
 import { useDispatch, useSelector } from 'react-redux';
@@ -57,7 +57,7 @@ export const RecipeScreen = () =>
                         })}
 
                     </List.Section>
-                    <SimularRecipes />
+                    <SimilarRecipes />
                 </ScrollView>
             }
 

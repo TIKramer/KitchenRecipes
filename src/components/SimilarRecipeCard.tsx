@@ -7,14 +7,14 @@ import { actionCreators } from '../../state';
 import { useDispatch } from "react-redux";
 
 
-const SimularRecipeCard = ({ item }: { item: Simular }) =>
+const SimilarRecipeCard = ({ item }: { item: Simular }) =>
 {
   const dispatch = useDispatch();
   const { setRecipeID } = bindActionCreators(actionCreators, dispatch);
 
   return (
     <Card style={styles.cardContainer}>
-      <TouchableOpacity onPress={() => setRecipeID(item.id)}>
+      <TouchableOpacity onPress={() => setRecipeID(item.id, undefined)}>
         <Card.Content>
         </Card.Content>
         <Card.Cover style={styles.cardImage} source={{ uri: getRecipeImageUri('small', item.id, item.imageType) }} />
@@ -38,4 +38,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default SimularRecipeCard;
+export default SimilarRecipeCard;
