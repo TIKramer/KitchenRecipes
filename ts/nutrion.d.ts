@@ -12,7 +12,7 @@ type nutritionalInformation
     percentCarbs: number,
     percentFat: number,
     percentProtein: number,
-  },
+  }
  
 type nutrition = {
     title: string,

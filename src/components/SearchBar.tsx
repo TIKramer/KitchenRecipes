@@ -36,7 +36,7 @@ const SearchBar = ({ term, onTermChange, onTermSubmit, searchBarRef, placeholder
           borderless
           rippleColor="transparent"
           onPress={() => onTermChange('')}
-          color={theme.colors.mediumGrey}
+          color={theme.colors.primary}
           icon={({ size, color }) => (
             <MaterialCommunityIcons name="close" color={color} size={size} />
           )}

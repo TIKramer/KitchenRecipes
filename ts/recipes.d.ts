@@ -3,6 +3,7 @@ type Recipe_Information =
   id: number,
   title: string,
   image: string,
+  missedIngredientCount: number;
   imageType: string,
   serving: number,
   readyInMinutes: number,
@@ -14,9 +15,6 @@ type Recipe_Information =
   spoonacularScore: number,
   pricePerServing: number
   analyzedInstructions: instructions[],
-  
-
-
 }
 
 

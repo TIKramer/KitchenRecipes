@@ -18,7 +18,7 @@ const SimularRecipeCard = ({ item }: { item: Simular }) =>
         <Card.Content>
         </Card.Content>
         <Card.Cover style={styles.cardImage} source={{ uri: getRecipeImageUri('small', item.id, item.imageType) }} />
-        <Text variant="headlineMedium">{item.title}</Text>
+        <Text >{item.title}</Text>
       </TouchableOpacity>
     </Card>
   )

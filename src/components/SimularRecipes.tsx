@@ -9,7 +9,7 @@ import SimularRecipeCard from './SimularRecipeCard';
 
 const SimularRecipes = () =>
 {
-    const { id } = useSelector((state) => state.recipe);
+    const { id } = useSelector((state: State) => state.recipe);
     const [simular, setSimular] = React.useState<Simular[]>([]);
 
 
@@ -19,8 +19,6 @@ const SimularRecipes = () =>
 
         )
     }, []);
-
-
 
     const getRecipes = async () =>
     {
@@ -35,14 +33,14 @@ const SimularRecipes = () =>
     };
     return (
         <View>
-            <Text variant="headlineLarge">Simular Recipes</Text>
+            <Text>Simular Recipes</Text>
 
             <FlatList
                 data={simular}
                 horizontal={true}
-                keyExtractor={(item) => item.id}
+                keyExtractor={(item) => 'key'+item.id}
                 renderItem={({ item }) =>
-                    <SimularRecipeCard item={item} style={{ height: 50, width: 50 }}>  </SimularRecipeCard>}
+                    <SimularRecipeCard item={item} />  }
             />
 
         </View>

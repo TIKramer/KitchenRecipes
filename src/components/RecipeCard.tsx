@@ -17,7 +17,7 @@ const RecipeCard = ({ id, title, image, missingCount }: { id: number, title: str
     const loadRecipe = () =>
     {
         setRecipeID(id)
-        navigation.navigate('Recipe')
+        navigation.navigate('RecipeNav')
 
     }
     return (
@@ -30,7 +30,7 @@ const RecipeCard = ({ id, title, image, missingCount }: { id: number, title: str
                 </Card.Content>
                 <Card.Cover style={styles.cardImage} source={{ uri: image }} />
                 <Divider />
-                <Text style={styles.title} variant="bodyMedium">{title}</Text>
+                <Text style={styles.title}>{title}</Text>
                 {missingCount ?
                     <Paragraph>{missingCount > 0 ? `missing ${missingCount} ingredients` : 'you have all the ingredients'}</Paragraph>
                     : null}

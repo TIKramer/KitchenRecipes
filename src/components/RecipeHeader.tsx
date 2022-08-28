@@ -10,7 +10,7 @@ import { useSelector } from "react-redux";
 
 const RecipeHeader = () =>
 {
-  const { missingCount, title, image, sourceName, readyInMinutes, aggregateLikes } = useSelector((state) => state.recipe);
+  const { missedIngredientCount, title, image, sourceName, readyInMinutes, aggregateLikes } = useSelector((state: State) => state.recipe);
 
 
   return (
@@ -38,8 +38,8 @@ const RecipeHeader = () =>
               {sourceName}
             </Subheading>
           </View>
-          {missingCount > 0 ?
-            <Text>You are missing {missingCount} ingredients</Text>
+          {missedIngredientCount > 0 ?
+            <Text>You are missing {missedIngredientCount} ingredients</Text>
             :
             <Text>You have all the ingredients</Text>
           }
@@ -66,8 +66,6 @@ const RecipeHeader = () =>
 };
 
 const styles = StyleSheet.create({
-
-
 
   recipeInfoContainerDivider:
   {

@@ -13,14 +13,14 @@ export const IngredientsScreen = () =>
     // hooks
     const [ingredients, setIngredients] = useState<ingredient[]>([])
     const [loading, setLoading] = useState<boolean>(false)
-    const { id } = useSelector((state) => state.recipe);
+    const { id } = useSelector((state: State) => state.recipe);
 
     useEffect(() =>
     {
         getIngredients(
 
         )
-    }, []);
+    }, [id]);
 
     const getIngredients = async () =>
     {
@@ -47,7 +47,7 @@ export const IngredientsScreen = () =>
                         {ingredients?.map(ingredient =>
                         {
                             return (
-                                <List.Item title={ingredient.name} description={`${ingredient.amount?.metric.value} ${ingredient.amount?.metric.unit}`}
+                                <List.Item key={ingredient.name} title={ingredient.name} description={`${ingredient.amount?.metric.value} ${ingredient.amount?.metric.unit}`}
                                     left={() => <List.Icon icon={{ uri: getIngredientImageUri('small', ingredient.image) }} />} />
                             )
                         })}
