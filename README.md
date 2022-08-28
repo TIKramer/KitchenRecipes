@@ -2,41 +2,43 @@
 Project to practice my react native :)
 An app for finding recipes with the ingredients you have in your kitchen
 
-#Installing:
-Get expo
-npm install
-npm start
+## Installing:
+Get expo  
+npm install  
+npm start  
 
 Change the api key in the config - I only have 150 tickets per day on the API - You can get your own api key here - https://spoonacular.com/food-api/console#Dashboard
 
-#Usage:
+## Usage:
 Search ingredients using comma seperated values: example - carrator, egg, cheese
 
-#Piccies 
+## Piccies 
 
-Search screen
+##### Search screen
 <br/>
 <img src="https://github.com/TIKramer/KitchenRecipes/blob/master/ScreenShots/main.jpg" width='30%' height="30%">
 <br/>
-Search result
+
+##### Search result
 <br/>
+
 
 <img src="https://github.com/TIKramer/KitchenRecipes/blob/master/ScreenShots/search.jpg" width='30%' height="30%">
 <br/>
 
-Recipe screen
+##### Recipe screen
 <br/>
 
 <img src="https://github.com/TIKramer/KitchenRecipes/blob/master/ScreenShots/recipe.jpg" width='30%' height="30%">
 <br/>
 
-Ingredients
+##### Ingredients
 <br/>
 
 <img src="https://github.com/TIKramer/KitchenRecipes/blob/master/ScreenShots/ingredients.jpg" width='30%' height="30%">
 <br/>
 
-Nutritional
+##### Nutritional
 <br/>
 
 <img src="https://github.com/TIKramer/KitchenRecipes/blob/master/ScreenShots/info.jpg" width='30%' height="30%">
@@ -44,5 +46,5 @@ Nutritional
 
 <br/>
 
-#Contribute 
+## Contribute 
 Any one can contribute - feel free :)
