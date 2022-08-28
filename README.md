@@ -13,8 +13,36 @@ Change the api key in the config - I only have 150 tickets per day on the API - 
 Search ingredients using comma seperated values: example - carrator, egg, cheese
 
 #Piccies 
-![alt text](https://github.com/[TIKramer]/[KitchenRecipes][master]/screenshots//home.jpg?raw=true)
 
+Search screen
+<br/>
+<img src="https://github.com/TIKramer/KitchenRecipes/blob/master/ScreenShots/main.jpg" width='30%' height="30%">
+<br/>
+Search result
+<br/>
+
+<img src="https://github.com/TIKramer/KitchenRecipes/blob/master/ScreenShots/search.jpg" width='30%' height="30%">
+<br/>
+
+Recipe screen
+<br/>
+
+<img src="https://github.com/TIKramer/KitchenRecipes/blob/master/ScreenShots/recipe.jpg" width='30%' height="30%">
+<br/>
+
+Ingredients
+<br/>
+
+<img src="https://github.com/TIKramer/KitchenRecipes/blob/master/ScreenShots/ingredients.jpg" width='30%' height="30%">
+<br/>
+
+Nutritional
+<br/>
+
+<img src="https://github.com/TIKramer/KitchenRecipes/blob/master/ScreenShots/info.jpg" width='30%' height="30%">
+<br/>
+
+<br/>
 
 #Contribute 
 Any one can contribute - feel free :)
