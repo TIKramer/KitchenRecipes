@@ -12,7 +12,7 @@ export const NutritionalScreen = () =>
     const { colors } = useTheme();
     const [nutritionalValues, setNutritionalValues] = useState<nutritionalInformation>()
     const [loading, setLoading] = useState<boolean>(false)
-    const { id } = useSelector((state) => state.recipe);
+    const { id } = useSelector((state: State) => state.recipe);
 
 
     const getNutritionalInfo = async () =>
@@ -33,7 +33,7 @@ export const NutritionalScreen = () =>
 
         getNutritionalInfo(
         )
-    }, []);
+    }, [id]);
 
 
     return (
@@ -51,7 +51,7 @@ export const NutritionalScreen = () =>
                         {
 
                             return (
-                                <View style={styles.progressBarContainer}>
+                                <View key={object.title} style={styles.progressBarContainer}>
                                     <Text style={{ flex: 1 }}>{object.title}</Text>
                                     <ProgressBar style={styles.progressBar} progress={object.percentOfDailyNeeds / 100} color={colors.accent} />
                                     <Text style={{ flex: 1 }}> {object.amount}</Text>

@@ -1,28 +1,26 @@
-import {  FlatList, KeyboardAvoidingView, StyleSheet, View } from 'react-native';
-
-import { RootTabScreenProps } from '../../types';
+import {  FlatList, KeyboardAvoidingView, StyleSheet, TextInput, View } from 'react-native';
 import React, { useRef, useState } from 'react';
 import SearchBar from '../components/SearchBar';
 import { recipeAPI } from '../api';
 import { ActivityIndicator } from 'react-native-paper';
 import RecipeCard from '../components/RecipeCard';
-
 import EmptyRecipeList from '../components/EmptyRecipeList';
+import { RootTabScreenProps } from '../../ts/navigation';
 
 
 
-export default function SearchScreen({ }: RootTabScreenProps<'TabOne'>)
+export default function SearchScreen({ }: RootTabScreenProps<'Search'>)
 {
-  const searchBarRef = useRef();
+  const searchBarRef = useRef(null);
   const [term, setTerm] = useState("");
-  const [recipes, setRecipes] = useState<Recipe_Information>()
+  const [recipes, setRecipes] = useState<Recipe_Information[]>()
   const [loading, setLoading] = useState<boolean>(false)
 
 
   const updateSearch = async () =>
   {
     setLoading(true)
-    const response = await recipeAPI.getRecipesByIngredients(term) as Recipe_Information;
+    const response = await recipeAPI.getRecipesByIngredients(term) as Recipe_Information[];
     setRecipes(response)
     setLoading(false)
   };
@@ -38,8 +36,6 @@ export default function SearchScreen({ }: RootTabScreenProps<'TabOne'>)
         placeholder='Search ingredients'
       />
 
-
-
       <View style={{
         flex: 1, alignItems: 'center',
         justifyContent: 'center'
@@ -49,7 +45,7 @@ export default function SearchScreen({ }: RootTabScreenProps<'TabOne'>)
           <FlatList style={{ flex: 1 }}
             data={recipes}
             numColumns={2}
-            keyExtractor={(item, index) => item.id}
+            keyExtractor={(item, index) => 'key'+item.id}
             renderItem={({ item }) => <RecipeCard id={item.id} title={item.title} image={item.image} missingCount={item.missedIngredientCount}></RecipeCard>
 
             }
