@@ -1,5 +1,5 @@
 import * as axiosLib from 'axios';
-import { API_BASE_URL, API_KEY } from '../utils/config';
+import { API_BASE_URL, API_KEY} from '../utils/config';
 
 
 
