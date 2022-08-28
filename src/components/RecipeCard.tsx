@@ -1,10 +1,8 @@
 import { Card, Divider, Paragraph, Text } from "react-native-paper";
 import { bindActionCreators } from "redux";
 import { actionCreators } from '../../state';
-
-
-import { useSelector, useDispatch } from "react-redux";
-import { TouchableOpacity } from "react-native";
+import { useDispatch } from "react-redux";
+import { TouchableOpacity, StyleSheet } from "react-native";
 import React from "react";
 import { useNavigation } from '@react-navigation/native';
 
@@ -13,13 +11,11 @@ import { useNavigation } from '@react-navigation/native';
 const RecipeCard = ({ id, title, image, missingCount }: { id: number, title: string, image: string, missingCount: number | undefined }) =>
 {
     const navigation = useNavigation();
-
     const dispatch = useDispatch();
+    const { setRecipeID } = bindActionCreators(actionCreators, dispatch);
 
-    const { setRecipeID,setMissingCount } =
-        bindActionCreators(actionCreators, dispatch);
-
-    const loadRecipe =() => {
+    const loadRecipe = () =>
+    {
         setRecipeID(id)
         navigation.navigate('Recipe')
 
@@ -52,11 +48,11 @@ const styles = StyleSheet.create({
         width: '45%', marginHorizontal: 5, marginVertical: 5
     },
     cardImage: {
-        height: 100 
+        height: 100
+    },
+    title: {
+        fontWeight: 'bold'
     }
-    title:{
-        fontWeight: 'bold' 
-    }
-  });
-  
+});
+
 export default RecipeCard;
