@@ -20,7 +20,7 @@ export const RecipeScreen = () =>
                     {analyzedInstructions[0]?.steps?.map((object: step) =>
                     {
                         return (
-                            <Step number={object.number} ingredients={object.ingredients} equipment={object.equipment} instructions={object.step}/> 
+                            <Step key={object.number} number={object.number} ingredients={object.ingredients} equipment={object.equipment} instructions={object.step}/> 
                         )
                     })}
 
