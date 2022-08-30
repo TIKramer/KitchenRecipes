@@ -2,9 +2,8 @@ import React from "react";
 import { useState } from "react";
 import { FlatList, View, StyleSheet } from "react-native";
 import { Card, Divider, Title } from "react-native-paper";
-
-import HideWithKeyboard from "react-native-hide-with-keyboard";
-
+import { HideOnKeyboard, ShowOnKeyboard } from "react-native-hide-onkeyboard";
+ 
 const EmptyRecipeList = () =>
 {
 
@@ -45,7 +44,7 @@ const EmptyRecipeList = () =>
                 }
             ></FlatList>
                 <View style={styles.textContainer}>
-                <HideWithKeyboard>
+                <HideOnKeyboard>
 
                     <View style={
                         styles.textBackgroundEffect}>
@@ -53,7 +52,16 @@ const EmptyRecipeList = () =>
                         <Title style={{
                         }}> Search ingredients to find recipes </Title>
                     </View>
-                    </HideWithKeyboard>
+                    </HideOnKeyboard>
+                    <ShowOnKeyboard>
+                    <View style={
+                        styles.textBackgroundEffect}>
+
+                        <Title style={{
+                        }}> HELLO IM BACK ingredients to find recipes </Title>
+                    </View>
+
+                    </ShowOnKeyboard>
 
                 </View>
         </View>
